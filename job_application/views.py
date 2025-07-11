@@ -19,7 +19,7 @@ def index(request):
                                 email=email, date=date, occupation=occupation)
             message_body = f"A new job application was submitted. Thank you, {first_name}."
             email_message = EmailMessage("Form submission confirmation", message_body, to=[email])
-            email_message.send()
+            #email_message.send()
 
 
 
@@ -27,5 +27,7 @@ def index(request):
     return render(request, "index.html")
 
 
+def about(request):
+    return render(request, "about.html")
 
 
